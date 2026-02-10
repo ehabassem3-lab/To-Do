@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ToDo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/Light_Blue</item>
+        <item name="colorSecondary">@color/back_ground_light</item>
+    </style>
+
+    <style name="Theme.ToDo" parent="Base.Theme.ToDo" />
+
+    <style name="titleLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="titleMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="titleSmall">
+    <item name="android:textSize">18sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/Light_Blue</item>
+   </style>
+    <style name="bodyLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+    <style name="bodyMedium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="bodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="RoundFab">
+        <item name="cornerSize">50%</item>
+        <item name="color">@color/white</item>
+    </style>
+
+</resources>
