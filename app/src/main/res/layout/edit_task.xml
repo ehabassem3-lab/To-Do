@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/TopBar"
+
+        />
+    <ImageView
+        android:id="@+id/BackarrowEditTask"
+        android:layout_width="60.dp"
+        android:layout_height="50.dp"
+        android:src="@drawable/ic_back_arrow"
+        app:tint="@color/white"
+        android:paddingStart="20.dp"
+        app:layout_constraintTop_toTopOf="@+id/TextHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TextHeader"
+        />
+    <TextView
+        android:id="@+id/TextHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/BackarrowEditTask"
+        android:text="To Do List"
+        android:textColor="@color/white"
+        android:textSize="20.dp"
+        android:textStyle="bold"
+        android:layout_marginStart="30.dp"
+        android:layout_marginTop="30dp"
+        />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20.dp"
+            android:layout_marginTop="140.dp"
+            app:cardCornerRadius="20.dp"
+            android:layout_height="600.dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/EdiTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20.dp"
+                android:textStyle="bold"
+                android:text="Edit Task"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20.dp"
+
+                />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Add_Task_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".6"
+                    app:layout_constraintTop_toBottomOf="@+id/EdiTask"
+                    android:layout_marginTop="100.dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="Enter the task title"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintWidth_percent=".6" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Add_Task_Details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".6"
+                    app:layout_constraintTop_toBottomOf="@+id/Add_Task_Name"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="Enter the task details"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:layout_constraintWidth_percent=".6" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:id="@+id/Task_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Add_Task_Details"
+                    app:layout_constraintBottom_toTopOf="@id/Craete_Task_Button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="26/10/2026"
+                    style="@style/titleMedium"
+                    android:textSize="14dp"
+                    android:textStyle="italic"
+
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Craete_Task_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Task"
+                    app:layout_constraintTop_toBottomOf="@id/Task_Date"
+                    android:layout_marginHorizontal="30dp"
+                    android:backgroundTint="@color/Light_Blue"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingVertical="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/button_round"
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

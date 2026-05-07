@@ -1,11 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ToDo" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ToDo"  parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/Light_Blue</item>
         <item name="colorSecondary">@color/back_ground_light</item>
     </style>
 
     <style name="Theme.ToDo" parent="Base.Theme.ToDo" />
+    <style name="TasksListBgColor">
+        <item name="android:color">@color/black</item>
+    </style>
+    <style name="selectedDate">
+        <item name="android:textColor">@color/Light_Blue</item>
+
+    </style>
+    <style name="unSelectedDate">
+        <item name="android:textColor">@color/black</item>
+
+    </style>
 
     <style name="titleLarge">
         <item name="android:textSize">22sp</item>
@@ -41,5 +52,24 @@
         <item name="cornerSize">50%</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/back_ground_light</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_insets</item>
+        <item name="windowSplashScreenAnimationDuration">800</item>
+        <!-- THIS is very important -->
+        <item name="postSplashScreenTheme">@style/Theme.ToDo</item>
+    </style>
+    <style name="MyExposedDropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <!-- Hint when floating (focused or has selection) -->
+        <item name="hintTextColor">@color/Light_Blue</item>
 
+        <!-- Hint when resting/expanded (unfocused + empty) -->
+        <item name="android:textColorHint">@color/Light_Blue</item>  <!-- this is key for resting state -->
+
+        <!-- Optional: make it consistent / add opacity if you want lighter resting hint -->
+        <!-- <item name="android:textColorHint">#80Light_Blue_hex_here</item>  e.g. 50% opacity -->
+
+        <!-- Bonus: if you want different focused vs unfocused hint via selector -->
+        <!-- <item name="hintTextColor">@color/hint_text_selector</item> -->
+    </style>
 </resources>

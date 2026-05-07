@@ -14,12 +14,15 @@ import com.example.to_do.database.entity.Task
     abstract fun UserDao() : Task_Dao
 
      companion object{
-       private   var dataBase : Data_Base? = null
+
+         private   var dataBase : Data_Base? = null
          fun createDataBase(context: Context){
 
              dataBase =
                  Room
                      .databaseBuilder(context, Data_Base::class.java,"Task")
+                     .allowMainThreadQueries()
+                     .fallbackToDestructiveMigration(true)
                      .build()
 
 
