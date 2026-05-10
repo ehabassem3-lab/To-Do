@@ -1,6 +1,7 @@
 package contact_app
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -62,7 +63,17 @@ class MainContactsApp  : AppCompatActivity(){
     {
         ContactsList = DataBaseContacts.getDataBaseContacts().ContactsDao().showAll()
         adapter.contacts = ContactsList
+        EmptyContacts()
         adapter.notifyDataSetChanged()
+    }
+    fun EmptyContacts(){
+        if (ContactsList.isNotEmpty()) {
+            binding.EmptyContacts.visibility = View.GONE
+        }
+        else{
+            binding.EmptyContacts.visibility = View.VISIBLE
+
+        }
     }
 
 }
