@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="20dp"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Create_Task_Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:text="Add new  Contact"
+                style="@style/titleMedium"
+                android:paddingVertical="10dp"
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CotnactNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent=".6"
+                app:layout_constraintTop_toBottomOf="@+id/Create_Task_Header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Cotnact Number"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".6" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent=".6"
+                app:layout_constraintTop_toBottomOf="@+id/CotnactNumber"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Contact Name "
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:paddingVertical="5dp"
+                android:id="@+id/Task_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ContactName"
+                app:layout_constraintBottom_toTopOf="@id/Create_Contact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                style="@style/titleMedium"
+                android:textSize="14dp"
+                android:textStyle="italic"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Create_Contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Contact "
+                app:layout_constraintTop_toBottomOf="@id/Task_Date"
+                android:layout_marginHorizontal="100dp"
+                android:backgroundTint="@color/Light_Blue"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingVertical="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button_round"
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
